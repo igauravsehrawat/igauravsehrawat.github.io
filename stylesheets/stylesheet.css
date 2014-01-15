@@ -49,12 +49,15 @@ table {
 /* LAYOUT STYLES */
 body {
   font-size: 15px;
-  line-height: 1.5; 
-  background: #fafafa url(../images/body-bg.jpg) 0 0 repeat;
-  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
-  font-weight: 400;
-  color: #666;
+  background:url('../images/G_with_G.jpg')no-repeat;
+  background-size:100% 100%;
+height: 140px;
+display:block;
+padding:0 !important;
+margin:0;
 }
+
+
 
 a {
   color: #2879d0;
