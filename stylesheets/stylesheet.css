@@ -14,7 +14,14 @@
 	padding: 0;
 }
 
-html,
+
+			html { 
+  background: url(images/G_with_G.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 body {
 	height: 100%;
 	overflow: hidden;
