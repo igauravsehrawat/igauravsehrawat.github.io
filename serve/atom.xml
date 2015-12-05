@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[!Gaurav ]]></title>
+  <link href="http://igauravsehrawat.github.io/atom.xml" rel="self"/>
+  <link href="http://igauravsehrawat.github.io/"/>
+  <updated>2015-12-03T22:05:47+05:30</updated>
+  <id>http://igauravsehrawat.github.io/</id>
+  <author>
+    <name><![CDATA[Gaurav Sehrawat]]></name>
+    <email><![CDATA[igauravsehrawat@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fallback to competitive programming]]></title>
+    <link href="http://igauravsehrawat.github.iofallback-to-competitive-programming"/>
+    <updated>2015-12-03T00:00:00+05:30</updated>
+    <id>http://igauravsehrawat.github.io./fallback-to-competitive-programming</id>
+    <content type="html"><![CDATA[<p>Lately i have been making mistakes during my job and lot of them are logical, silly and easily detectable. But what is that happening? I don&rsquo;t have ADD/ADHD(Attention deficit/hyperactivity disorder). Contrast is, i didn&rsquo;t had these mistakes earlier.So I started slacking off on competitive websites during weekends.</p>
+
+<h2>Benefits</h2>
+
+<p>Performance started to improve as if I specifically don&rsquo;t need to think about silly mistakes. In order words brain muscles got weak since I left my brain gym and now it&rsquo;s pumped up. And it&rsquo;s also true that <b>overworking</b> is good habit. Being in practice of finding all the test-cases for a problem let us think more profoundly.</p>
+
+<p>Another benefit observed from this fallback is about procrastination. Now I procrastinate lot less, it&rsquo;s because during competitive programming contest you just can&rsquo;t stand because you aren&rsquo;t in mood. It&rsquo;s simple <code>GET YOUR SHIT DONE</code> attitude. Another benefit is to think fast through the problem. Thinking process becomes lag free, better concentration and got more work done is less time.</p>
+
+<h2>Brain gyms</h2>
+
+<p>There are lot of platforms like Topcoder, ICPC, Codeforce, HackerRank etc. But I personally prefer &ldquo;HackerRank&rdquo;(not sponsored). HackerRank got a good list of well curated problem. Problem language is mature and doesn&rsquo;t look like total sci-fi. Site generates good amount of discussion on problem and is active for most part of the month and year. They have problem from different domains and not just algorithms and time complexity. It&rsquo;s over all comp-sci problem which helps in over all development.</p>
+
+<blockquote><p>&ldquo;So keep calm and code-on&rdquo;.</p></blockquote>
+
+<h3>Cheers</h3>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bad variable names bleeds my eyes]]></title>
+    <link href="http://igauravsehrawat.github.io/bad-variable-names-bleeds-my-eyes"/>
+    <updated>2015-12-02T00:00:00+05:30</updated>
+    <id>http://igauravsehrawat.github.io/bad-variable-names-bleeds-my-eyes</id>
+    <content type="html"><![CDATA[<p>Good-bye i,j,k &hellip; variables. Good-bye soul-less variable names. There are lot of code conventions on the web but all their focus is formatting of the program which helps avoiding bugs. There is another aspect of code convention, that is having pragmatic variable names in your program/code.</p>
+
+<p><b>My focus</b> is to avoid bugs in code through a sane approach of naming variables. Variable can be the common confusion point of your program, especially if you want it to be read by your colleagues and maintainers. One&rsquo;s program must be like a story and variables must be the characters of the story. One definitely doesn&rsquo;t want characters to have non-sense names, right? Every program must a unique story and avoid plagiarism whenever needed.</p>
+
+<h2>BLAME GAME</h2>
+
+<p>Competitive programming gave us a habit of short &amp; funny variable names. Everyone cared about time complexity. That&rsquo;s not all I never got evaluated for beauty of my program at my academia too. Code must run and produce desired effect, isn&rsquo;t that the deal?</p>
+
+<h2>TRUTH</h2>
+
+<p>Blame game is shame, period.</p>
+
+<p>More reasons, pragmatic variables makes code maintainable and doesn&rsquo;t let bleed my(or others) eyes. Though it may take some time to arrive at thumb rule but it&rsquo;s worth the pain. Your co-workers will really appreciate these variables, also they enhance your vocabulary(pun intended).</p>
+
+<h2>Thumb Rules</h2>
+
+<ul>
+<li>Function &ndash; [Adverb] + Verb</li>
+<li>variable &ndash; [Adjective] + Noun</li>
+<li>Global variables &ndash; ALL CAPS NOUN</li>
+<li>Avoid borrowed/duplicate variables</li>
+</ul>
+
+
+<p>So next time you go for generic names like (var_a, var_b, bad_var, i, j,&hellip;) for variables, do yourself a favor, pinch yourself or take cold showers.</p>
+
+<p>Always follow good practices.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to avoid technical debts]]></title>
+    <link href="http://igauravsehrawat.github.io/avoid-technical-debts/"/>
+    <updated>2015-08-30T00:00:00+05:30</updated>
+    <id>http://igauravsehrawat.github.io/avoid-technical-debts</id>
+    <content type="html"><![CDATA[<p>Writing code can be scary especially in a collaborative environment and when you have to avoid techical debts.</p>
+
+<h3>But first what is <b>technical debt</b>?</h3>
+
+<p>Have a look at gif below and imagine you are coding instead of driving</p>
+
+<p><img src="http://igauravsehrawat.github.io/images/technical_debts.gif" style="margin-left:40%"></p>
+
+<h4>In simple words : code you wrote isn&rsquo;t maintable, hard to understand and does not follow code conventions of others.</h4>
+
+<p>So the first rule for writing code is understanding who is going to maintain it, who is going to add further code to it. And even that doesn&rsquo;t matter, writing good code should be a habit and shouldn&rsquo;t be broken at any cost.</p>
+
+<h2>Solution to bad code</h2>
+
+<ul>
+<li>Follow code conventions.</li>
+<li><p>For eg. while writing python follow pep8 conventions and while writing js code follow jslint conventions</p></li>
+<li><p>How granular or modular code should be?</p></li>
+<li><p>For eg. There should be separate function for separate task. It may depend on number lines of code for that function.</p></li>
+<li><p>How often comments should appear and on what severity?</p></li>
+</ul>
+
+
+<h2>THE TRUTH</h2>
+
+<blockquote><p>One can&rsquo;t write perfect code in one go.
+Refactoring, pruning is the key. May be you need to burn all your sphagetti code and it would definitely pay off.</p></blockquote>
+
+<h2>More concrete steps</h2>
+
+<ul>
+<li><p>Bad habits doesn&rsquo;t go easily. So there is pair programming for that. Pair programming reduces effort on new learning and makes new learning easy and fast. Key to good coding is good discussion. Look at the code written already and discuss about it and rewrite if needed.</p></li>
+<li><p>DESIGN : Technical debts can also be attributed to wrong code designs. Design is not just about visual art, it is also the architecture of code. Fitting code is no joke.</p>
+
+<ul>
+<li>Agility comes from good code design.</li>
+</ul>
+</li>
+<li><p>REFACTOR : Refactoring code brings new features to the application in current development, so refactor more and often.</p></li>
+</ul>
+
+
+<blockquote><p>Technical debt is like karma, gonna kick you soon or later.</p></blockquote>
+
+<p>That&rsquo;s enough of water-cooler side talk. Keep avoiding technical debts.</p>
+
+<p><b>Notes</b></p>
+
+<p>Thanks <a href="https://twitter.com/trssnd" target="_blank">Shyam Sundar</a> for reading the draft.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Importance of writing and public speaking]]></title>
+    <link href="http://igauravsehrawat.github.io/importance-of-writing-and-public-speaking/"/>
+    <updated>2015-05-22T00:00:00+05:30</updated>
+    <id>http://igauravsehrawat.github.io/importance-of-writing-and-public-speaking</id>
+    <content type="html"><![CDATA[<h2>Have you wondered what it is one thing that separate human from rest of the diversity ?</h2>
+
+<p>It is the ability to communicate and preserve that communication, spread that communication. Infact the nature follows the law, if you know something you can&rsquo;t keep it to yourself, you have to apply it and spread it. That&rsquo;s why universe is expanding and time flies by. Nothing is still and is at rest, so must be your thoughts.</p>
+
+<h2>There are no stupid thoughts and ideas !</h2>
+
+<p>Though i could have given example of Gallileo and Leonardo da vinci. But it is the shear imagination of humans that have given birth to miracles and technology. One must live for creativity and its implementation. So what if you failed n times, n+1 time you will succeed provided you don&rsquo;t repeat the mistakes.</p>
+
+<blockquote><p>Write like it&rsquo;s worth, think like it will be implemented.</p></blockquote>
+
+<p>The mere fact that idea will communicated makes it serious thought. One care and try to polish that idea. Ideas need not to be unique, but progressive</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[productive tips for command interface particularly shell]]></title>
+    <link href="http://igauravsehrawat.github.io/productive-tips-for-command-interface/"/>
+    <updated>2015-02-22T00:00:00+05:30</updated>
+    <id>http://igauravsehrawat.github.io/productive-tips-for-command-interface-particularly-shell</id>
+    <content type="html"><![CDATA[<p>Imagine a scenario where you would prefer to type instead of clicking. That day would be epic. As a developer, it&rsquo;s our job to use and spend time on command interface it can be shell, bash, or it can be a editor like vim, emacs etc. Lot of optimization has been made since the beginning of these things. Today i will specifically talking about shell/bash prompt.</p>
+
+<p>We generally use 20% of the features available there, to attain maximum efficiency in long term it learning rest 80% will help tremendously. So let&rsquo;s get down to business.</p>
+
+<h2>I. Using search in prompt</h2>
+
+<p>One can search through the commands one has previously typed. Just use</p>
+
+<div>
+  <pre><code class='bash'>Ctrl + R</code></pre>
+</div>
+
+
+<p>, this would enable backward search such that one can search through logged commands.</p>
+
+<h2>II. Using alias for long commands or shortcuts</h2>
+
+<p>For this one needs to use .bashrc or .zshrc(more about this later) file in the</p>
+
+<div>
+  <pre><code class='bash'>~/</code></pre>
+</div>
+
+
+<p>directory which is</p>
+
+<div>
+  <pre><code class='bash'>/home/username</code></pre>
+</div>
+
+
+<p>. There you have to add a <code>alias &lt;alias_name&gt;=&lt;your long command&gt;</code>
+for eg. for using p for python use</p>
+
+<div>
+  <pre><code class='bash'>&#39;alias p=&#39;python&#39;</code></pre>
+</div>
+
+
+<p> now you can just use p python_script.py to run the python script, or you can add your ssh command to   server ip,which are pretty long. Isn&rsquo;t that handy!</p>
+
+<h2>III. Configuring rsa key for auto pushing to github/git network.</h2>
+
+<p>You might be typing username and password every time you want to push to github. There is an easy way to do this automatic. One need to paste the key from <code>~/.ssh/</code> directory, keep in mind the key ends in .rsa . If you have one already generated and configured with ssh-agent then paste the key in github profile settings under SSH realted area.</p>
+
+<p>If you haven&rsquo;t done it yet, do it by using key-gen utility</p>
+
+<div>
+  <pre><code class='bash'>key-gen -t rsa -C &quot;your_email_id&quot;</code></pre>
+</div>
+
+
+<p><code>-t</code> is for defining the type of key which rsa in this case
+<code>-C</code> is to providing commenting so that you can identify different keys for what we are using email id.
+then add generated keys to ssh-agent using</p>
+
+<div>
+  <pre><code class='bash'>eval &quot;$(ssh-agent -s)&quot;</code></pre>
+</div>
+
+
+
+
+<div>
+  <pre><code class='bash'>ssh-add ~/.ssh/&lt;key_id.rsa&gt; &#39;&#39;&#39;</code></pre>
+</div>
+
+
+<p>And then follow the procedure to add it on github profile
+Additonal link: <a href="https://help.github.com/articles/generating-ssh-keys/">github-ssh</a>{:target=&ldquo;_blank&rdquo;}</p>
+
+<h2>IV. Using zsh instead of bash</h2>
+
+<p>zsh is an shell designed for interactive use, most of its features are from bash, so one can easily use as bash replacement.</p>
+
+<ul>
+<li><p>One of most fruitful feature is one don&rsquo;t need to type <code>cd</code> for changing the directory. Just type directory and enter &amp; you are in directory.</p></li>
+<li><p>Other feature is intelligent autocorrection, supposedly you made some type in case, zsh would auto correct it. For modifying the configuration use file at <code>~/.zshrc</code> like adding alias or export or path.
+Additional link:<a href="http://zsh.sourceforge.net/">zsh-link</a></p></li>
+</ul>
+
+
+<h2>V. Using oh-my-zsh framework for zsh</h2>
+
+<p>oh-my-zsh is most popular command line utility framework on github. It has premade zsh configuration which you would have to write otherwise in bashrc/zshrc files. you can use lot of themes from lot of community themes.</p>
+
+<p>A screenshot of my terminal using oh-my-zsh is given below
+<img src="http://s2.postimg.org/47mlvy4nt/oh_my_zsh_screenshot.png" alt="oh-my-zsh-screenshot" />
+Some useful mentions</p>
+
+<ul>
+<li><p>I can see full path of my working directory</p></li>
+<li><p>I can see git repository branch, i am working upon</p></li>
+<li><p>I can see time stamp for each command</p></li>
+<li><p>also if my git repos has been modified and there are uncommitment changes, i see all that on one terminal.</p></li>
+</ul>
+
+
+<p>Isn&rsquo;t that wonderful!
+Additional link:<a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a></p>
+
+<h2>VI. Mutliple tabs instead of mulitple windows</h2>
+
+<p>Lot of people bring a new command window for different task. Using tabs is recommended since you can switch easily and also see what is running on different tab.</p>
+
+<p>Just use <code>Alt + T</code> for new tab and <code>Alt + &lt;tab_number for eg.1,2 &gt;</code> for switching the tab.</p>
+
+<p>That&rsquo;s all for now. For more detailed information follow the links provided in the post</p>
+
+<p>Next time it will be productive while being python developer.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[better threads bug and memory management using valgrind]]></title>
+    <link href="http://igauravsehrawat.github.iobetter-threads-bug-and-memory-management-using-valgrind"/>
+    <updated>2014-08-05T00:00:00+05:30</updated>
+    <id>http://igauravsehrawat.github.io./better-threads-bugs-and-memory-management-using-valgrind</id>
+    <content type="html"><![CDATA[<h3>Problem ?</h3>
+
+<p>Problem arises when you don&rsquo;t get to know why my program dysfunctional , inspite of correct logic . The problem may be with memory handling or in the thread handling . Learning syntax is half part , gaining proficiency is another part .</p>
+
+<h3>what exactly is memory management ?</h3>
+
+<p>In C/C++ assigning memory &amp; handling threads can PITA until one reach a level of experience .
+Let&rsquo;s go by an example:</p>
+
+<div>
+  <pre><code class='c'>#include &lt;stdlib.h&gt;
+
+void bad_memory(void){
+    
+    int* array_alloc = malloc(20 * sizeof(int));
+    array_alloc[20] = 10 ;
+}
+
+int main(void){
+    
+    bad_memory();
+    return 0 ; 
+}</code></pre>
+</div>
+
+
+<p>The above code has two errors . It doesn&rsquo;t pops up during compilation and during execution .
+First one : assigning out of bound index of array_alloc a value i.e array_alloc[20]
+Second one : not freeing the allocated memory resulting in memory leak .</p>
+
+<h3>Valgrind to rescue !</h3>
+
+<p>By definition : The <a href="valgrind.org">Valgrind</a> tool suite provides a number of debugging and profiling tools that help you make your programs faster and more correct. The most popular of these tools is called Memcheck. It can detect many memory-related errors that are common in C and C++ programs and that can lead to crashes and unpredictable behaviour.</p>
+
+<p>To rescue onself run the executable using valgrind command</p>
+
+<div>
+  <pre><code class='c'>valgrind --leak-check=full ./a.out</code></pre>
+</div>
+
+
+<p>The result is as following</p>
+
+<div>
+  <pre><code class='bash'>valgrind --leak-check=full ./a.out 
+==25516== Memcheck, a memory error detector
+==25516== Copyright (C) 2002-2011, and GNU GPL&#39;d, by Julian Seward et al.
+==25516== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==25516== Command: ./a.out
+==25516== 
+==25516== Invalid write of size 4
+==25516==    at 0x400512: bad_memory (in /home/rooted/Documents/git-repos/workshop/code/a.out)
+==25516==    by 0x400522: main (in /home/rooted/Documents/git-repos/workshop/code/a.out)
+==25516==  Address 0x51f2068 is 0 bytes after a block of size 40 alloc&#39;d
+==25516==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25516==    by 0x400505: bad_memory (in /home/rooted/Documents/git-repos/workshop/code/a.out)
+==25516==    by 0x400522: main (in /home/rooted/Documents/git-repos/workshop/code/a.out)
+==25516== 
+==25516== 
+==25516== HEAP SUMMARY:
+==25516==     in use at exit: 40 bytes in 1 blocks
+==25516==   total heap usage: 1 allocs, 0 frees, 40 bytes allocated
+==25516== 
+==25516== 40 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==25516==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25516==    by 0x400505: bad_memory (in /home/rooted/Documents/git-repos/workshop/code/a.out)
+==25516==    by 0x400522: main (in /home/rooted/Documents/git-repos/workshop/code/a.out)
+==25516== 
+==25516== LEAK SUMMARY:
+==25516==    definitely lost: 40 bytes in 1 blocks
+==25516==    indirectly lost: 0 bytes in 0 blocks
+==25516==      possibly lost: 0 bytes in 0 blocks
+==25516==    still reachable: 0 bytes in 0 blocks
+==25516==         suppressed: 0 bytes in 0 blocks
+==25516== 
+==25516== For counts of detected and suppressed errors, rerun with: -v
+==25516== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 2 from 2)</code></pre>
+</div>
+
+
+<p>There are two errors : Heap error for invalid assign &amp; Leaks relating lost memory .</p>
+
+<p>Valgrind can also be misused to profile your code (pun intended )
+Further Valgrind can also be used for Bounty programs (like google chrome).</p>
+
+<h3>Conclusion !</h3>
+
+<p>There are other tools for debugging like <a href="http://www.gnu.org/software/gdb/">GDB</a> which is very elaborate &amp; pro-like . Apart from that Valgrind is there .
+As pointed out what&rsquo;s better than finding out bugs as quickly without any pain .</p>
+
+<p>Comments welcomed . Pros &amp; cons ?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[avoid brilliant jerks]]></title>
+    <link href="http://igauravsehrawat.github.io/brilliant-jerks/"/>
+    <updated>2014-07-18T00:00:00+05:30</updated>
+    <id>http://igauravsehrawat.github.io/brilliant-jerks</id>
+    <content type="html"><![CDATA[<h2>Brilliant jerks ?</h2>
+
+<p>So who are Brilliant jerks (someone awesome at coding/hacking?)
+Yes , they are top coder people , algorithmic strong and overrunning , specialist in their areas but with an collaboration problem with them . They get arrogant for their material and are blame gamers .</p>
+
+<h2>Philosphy !!</h2>
+
+<p>This philosphy is very much followed and applicable to startup culture and growth culture companies . Startup is  not looking for brilliant geek but also for a team player , who can effectively communicate with the team and maintain the integrity. A culture where you don&rsquo;t aim at others for the problem , a culture you believe in peer review system .</p>
+
+<h2>How to handle them?</h2>
+
+<p>The thing is one can&rsquo;t just trust them the best way is just to avoid these people because it is very much important to preserve the existing resources and something which can go side by side with them . The collaboration part is most important .</p>
+
+<h2>Filtering out soon ?</h2>
+
+<p>So how one filter them out , it&rsquo;s simple you can smell them out during the personal interview . Whether the person is trustful ,making false statement &amp; commiting their own mistakes .</p>
+
+<h3>GROWTH IS DIMINISHED BY SUCH JERKS</h3>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[thoughts on growth hacking]]></title>
+    <link href="http://igauravsehrawat.github.io/blog/2014/07/01/thoughts-on-growth-hacking.markdown/"/>
+    <updated>2014-07-01T16:19:01+05:30</updated>
+    <id>http://igauravsehrawat.github.io/blog/2014/07/01/thoughts-on-growth-hacking.markdown</id>
+    <content type="html"><![CDATA[<h1>Buzz word</h1>
+
+<p>Growth is buzz word in todays IT world especially startup world &amp; culture, if one is not continously growing , that is endangering sign. Either someother company may take over you like the cases happened for <strong>Kodak</strong>. So growth hacking is like <strong>&ldquo;MOVE FAST &amp; BREAK THINGS&rdquo;</strong>. One need to evolve and growt from/with the existing products and service. Its like branching out .</p>
+
+<h1>How to Growth hacking?</h1>
+
+<p>The hacking word isn&rsquo;t misleading, infact it is the inspiration for the <strong>Growth Culture</strong> . It isn&rsquo;t easy to continously Rise high &amp; higher , so one need to do it either by hook or by crook . That all is matter to find way between the hurdles. So having a hackers way to do the stuff isn&rsquo;t bad at all. Further this talent isn&rsquo;t easily visible just through face to face interview generally &amp; one can&rsquo;t simple induce it just that . So just watch &amp; observe precisely to find it .</p>
+
+<h1>Benefits</h1>
+
+<p>One may definitely argue and fight for the cons but the truth is <strong>Growth hacking</strong> or other alternative <strong>Productivity</strong> is addictive habit , one you are into it , one does go for it everyday &amp; everytime.
+And ofcourse there are options to rollback if anything goes wrong .</p>
+
+<h1>Conclusion</h1>
+
+<p>Finding solution any-how is main motive ,it can done through being creative or just using the conventional methods.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Programming-in-haskell]]></title>
+    <link href="http://igauravsehrawat.github.io/programming-in-haskell/"/>
+    <updated>2014-06-29T00:00:00+05:30</updated>
+    <id>http://igauravsehrawat.github.io/programming-in-haskell</id>
+    <content type="html"><![CDATA[<p>Haskell is a functional language &amp; very different from imperative langauges such as python,ruby,c++..etc . It is also called declarative language, the reason is simple one just describe the problem in the program instead of instructions on how to solve the problem .</p>
+
+<h2>Why Haskell ?</h2>
+
+<p>It&rsquo;s just not the haskell , this is about functional language , equal importance is for the Scala . The main context for functional langauge is involvement of &ldquo;Academia&rdquo; , which other imperative language fails to bridge . It so much fun to learn mathematics and science using functional langauge .</p>
+
+<h2>Syntax</h2>
+
+<p>Syntax might seems very unconventional to conventional programmers , but it&rsquo;s just for the good . Functional programming discourages mutable variable &amp; does not allow reassignment to variable.</p>
+
+<p>Haskel limelight:</p>
+
+<div>
+  <pre><code class='haskell'>&quot;-- &quot; is used for comments
+let this = [ 1,23,42,97] -- &#39;this&#39; represents variable name for the list 
+length this  -- length is a function 
+                --notice while passing arguments no brackets are used
+let start = head this -- return the first element of list
+
+let latter = tail this -- return list apart from head
+
+let access = this !! 2 -- &#39;!!&#39; used to access element 2 tell the possition. 
+                        --  ofcourse indexing begins with &quot;0&quot;
+
+null this --null is function &#39;this &#39; act as argument will return true if argument is null
+
+let loop = repeat 4 --repeat act as infinite loop and generate an infinte list
+                    --infinity concept is just kept in mind
+let slice = take 2 this --slice first two elements from the list
+let duplicate  = replicate 2 5  --finite loop for generating argument &#39;n&#39; times
+
+
+let append = x ++ y -- (++) appends two lists one after another
+
+let two_dim = [[1,4,5],[2,9,7],[1,2,3]] --syntax for two dimensional list
+
+let concatenation = concat two_dim --this would reduce two dimensional list to one dimensional by concatenating each sublist to single list</code></pre>
+</div>
+
+
+<p>Well if you reached so far , won&rsquo;t you like to evaluate yourself .</p>
+
+<div>
+  <pre><code class='haskell'>expandList :: [Int] -&gt; [Int]
+expandList lst = if null lst then [] else (replicate (head lst) (head lst)) ++ expandList(tail lst)</code></pre>
+</div>
+
+
+<p>You have to guess the purpose of above function .</p>
+
+<p>Put it in comment section .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Gain Instant Confidence]]></title>
+    <link href="http://igauravsehrawat.github.io/blog/2014/06/19/how-to-gain-instant-confidence.markdown/"/>
+    <updated>2014-06-19T23:49:15+05:30</updated>
+    <id>http://igauravsehrawat.github.io/blog/2014/06/19/how-to-gain-instant-confidence.markdown</id>
+    <content type="html"><![CDATA[<h2>Internet Quote</h2>
+
+<blockquote><p>   &ldquo;Genius are full of doubts while stupid are full of confidence&rdquo;.</p></blockquote>
+
+<p>That&rsquo;s true and but isn&rsquo;t that is unfair ,people judge you just by confidence .
+One quick way to gain confidence is : &ldquo;Do what you are afraid of ?&rdquo;. <br/>
+Whether it is to prepare for a speech &ldquo; Do a mock up speech in front of friends?&#8221;<br/>
+Be it a algorithm problem &#8220;Just ask someone else for help if stuck but don&rsquo;t put it on tomorrow !&#8221;<br/>
+or Be it making a Blogging site: &#8220;Just do it . Refactor it later&rdquo;.</p>
+
+<p>One shouldn&rsquo;t wait for perfection . Iterate later .
+And Let keep it short that way .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[first_post]]></title>
+    <link href="http://igauravsehrawat.github.io/blog/2014/06/02/first-post.markdown/"/>
+    <updated>2014-06-02T00:37:01+05:30</updated>
+    <id>http://igauravsehrawat.github.io/blog/2014/06/02/first-post.markdown</id>
+    <content type="html"><![CDATA[<h1>Purpose of blogging</h1>
+
+<p>This blogging page will mainly deal with the meta information on information technology and its domain . This will completely deal with non-technical aspect &amp; thoughts .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[how-github-can-be-misused]]></title>
+    <link href="http://igauravsehrawat.github.io/how-github-can-be-misused/"/>
+    <updated>2014-05-17T00:00:00+05:30</updated>
+    <id>http://igauravsehrawat.github.io/how-github-can-be-misused</id>
+    <content type="html"><![CDATA[<p>Github can land you in trouble if you don&rsquo;t know some hacks of it .</p>
+
+<ul>
+<li>For example using  a hack ,one can add any collaborator to repository without acknowledgement of the collaborator . Yes , any  collaborator. The commit wil appear as if that person just contributed to the code base.</li>
+</ul>
+
+
+<p>How ?</p>
+
+<div>
+  <pre><code class='bash'>git -config user.name &lt;any_user_in_the_world&gt;
+git -config user.email &lt;email_of_that_user&gt;</code></pre>
+</div>
+
+
+<p>so now when you push the user would not be you but the user you specified.</p>
+
+<ul>
+<li><p>Apart from that one can also host website without getting tracked or traced ,and that too for free.</p></li>
+<li><p>One more bad trick is changing git commit time , which is very misleading for bad purpose . One can check gitcheatsheet <b><a href="https://github.com/igauravsehrawat/Utility-scripts/blob/master/productivity/git_cheatsheet">here</a></b>.</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to revive old lost octopress blog]]></title>
+    <link href="http://igauravsehrawat.github.io/reviving-old-lost-octopress-blog/"/>
+    <updated>2014-05-16T00:00:00+05:30</updated>
+    <id>http://igauravsehrawat.github.io/reviving-old-lost-octopress-post.md</id>
+    <content type="html"><![CDATA[Have you ever lost some blog without source ?
+
+If yes the below script will be helpful for you to convert your atom.xml [rss feed] into markdown files .
+
+Script is parser which first parse the filename and then its content using nokogiri. There are scripts already available for same if blog is on wordpress .
+
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Escalating from octopress to jekyll]]></title>
+    <link href="http://igauravsehrawat.github.io/escalating-from-octopress/"/>
+    <updated>2014-04-19T00:00:00+05:30</updated>
+    <id>http://igauravsehrawat.github.io/escalating-from-octopress</id>
+    <content type="html"><![CDATA[<p>Octopress is derived from jekyll itself . It is very much automated with commands but it is mainly for blogging.</p>
+
+<div>
+  <pre><code class='ruby'>rake new_post[&quot;escalating from octopress to jekyll&quot;]</code></pre>
+</div>
+
+
+<p>but in jekyll</p>
+
+<div>
+  <pre><code class='ruby'>touch 2014-04-19-escalating-from-octopress-to-jekyll</code></pre>
+</div>
+
+
+<h1>why jekyll ?</h1>
+
+<p>Jekyll because it has super power . Jekyll can handle having post and pages for the website , while the octopress is only able to handle only post .</p>
+
+<p>thats one only no ?</p>
+
+<p>instead of</p>
+
+<div>
+  <pre><code class='ruby'>rake deploy</code></pre>
+</div>
+
+
+<p>one uses</p>
+
+<div>
+  <pre><code class='ruby'>jekyll build</code></pre>
+</div>
+
+
+<p>and push directly to github along with markdown files , which is very handy feature incase one lost blog . It can be regenerated again.</p>
+
+<p>Not to mention the awesome liquid tags . and emoji  :smiley:</p>
+
+<h1>what superpower-jekyll got ?</h1>
+
+<ol>
+<li><p>Behind the scene jekyll generates the html code which github.io pages can understand .</p></li>
+<li><p>Jekyll is also the wizard behind handling gh-pages on github i.e the github pages can recognize if the sites is build in jekyll so it will handle it in jekyll gem way .</p></li>
+<li><p>The best thing one can mix HTML with markdown .</p></li>
+</ol>
+
+
+<p>4.More over it , it build with hackers tendency i.e code for everything.</p>
+
+<h1>best place to learn jekyll ?</h1>
+
+<p>Official documentation is the best @ <a href="http://jekyllrb.com/docs/home"> jekyll docs</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Planning doesn't work while judging does.]]></title>
+    <link href="http://igauravsehrawat.github.io/blog/2014/03/09/planning-does-not-work-while-judging-does/"/>
+    <updated>2014-03-09T18:32:13+05:30</updated>
+    <id>http://igauravsehrawat.github.io/blog/2014/03/09/planning-does-not-work-while-judging-does</id>
+    <content type="html"><![CDATA[<h2>Planning Does Not Work While Judging Does</h2>
+
+<pre><code>Yes.  
+</code></pre>
+
+<p>Planning includes others people actions, well that can change instantaneously . So the plan gets nowhere. Is that what you want ? NO.</p>
+
+<p>Judging part includes you as an integral part. Well you can trust yourself more than anybody else yourself.</p>
+
+<p>Planning also sounds more like a evil intention. Judging either goes right or wrong . That&rsquo;s all.</p>
+
+<blockquote><pre><code>Goal is same but paths are different . Choose the right one.
+</code></pre></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Computional thinking]]></title>
+    <link href="http://igauravsehrawat.github.io/blog/2014/03/06/computational-thinking-way-to-problem-solving/"/>
+    <updated>2014-03-06T18:32:13+05:30</updated>
+    <id>http://igauravsehrawat.github.io/blog/2014/03/06/computational-thinking-way-to-problem-solving</id>
+    <content type="html"><![CDATA[<h2>Computational Thinking: Way to Problem Solving</h2>
+
+<blockquote><pre><code>   What is compuational Thinking ?
+</code></pre></blockquote>
+
+<p>It is an approach to problem solving,system designing and also understanding human behaviour by drawing on the concepts fundamental to computer science . Pretty Gross ?</p>
+
+<p>Simplification: Act of thinking with principles borrowed from computer.</p>
+
+<p>Any problem can be solved if it is thinked in terms of :</p>
+
+<blockquote><pre><code> 1. Constraints   
+ 2. Abstraction  
+ 3. Decomposition  
+ 4. Heuristics  
+ 5. Algorithms  
+ 6. Recursion  
+ 7. Concurrency  
+ 8. Synchronization  
+ 9. Efficiency  
+ 10. Elegance  
+ 11. Tradeoffs between processing and storage  
+ 12. Caching  
+ 13. Interpreting code as data and data as code [ imp]  
+ 14. Prevention,detection and recovery from worst-case scenarios.  
+</code></pre></blockquote>
+
+<p>That&rsquo;s all the cases researcher{J.M. Wing} could have thought of till now. So just fit your problem in terms of above parameters and one is good to go.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Communication Is Important]]></title>
+    <link href="http://igauravsehrawat.github.io/blog/2014/02/27/communication-is-important/"/>
+    <updated>2014-02-27T18:32:13+05:30</updated>
+    <id>http://igauravsehrawat.github.io/blog/2014/02/27/communication-is-important</id>
+    <content type="html"><![CDATA[<h2>Communication Is Important</h2>
+
+<p>Communication is very important . This is productivity part for any job. This shows</p>
+
+<ul>
+<li>commitment</li>
+<li>your understanding ,</li>
+<li>progress towards goals,</li>
+<li>problems in goals</li>
+</ul>
+
+
+<p>It is acutally not the pair programming instead it&rsquo;s actually the communication which is best practice in developing and writing codes. If one is thinking that he/she will surprise the world just like that in a go.</p>
+
+<blockquote><pre><code>   You are at the wrong side .
+</code></pre></blockquote>
+
+<p>Productivity comes when you don&rsquo;t even think about it .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Just Make Simple but No Simpler]]></title>
+    <link href="http://igauravsehrawat.github.io/blog/2014/02/26/just-make-simple-but-no-simpler/"/>
+    <updated>2014-02-26T18:32:13+05:30</updated>
+    <id>http://igauravsehrawat.github.io/blog/2014/02/26/just-make-simple-but-no-simpler</id>
+    <content type="html"><![CDATA[<h2>Just Make Simple but No Simpler</h2>
+
+<p>The above lines are of mighty Albert Einstein.
+Don&rsquo;t assume yourself the complexity of the problem . For example jeklly and octopress and static site generator . That&rsquo;s all .
+No need to make surprises for yourself.</p>
+
+<p>You put your content in markdown , preview it and generate the relevant content in html,css,js using jekyll. And ultimately do the rake deploy.</p>
+
+<p>One should definetly agree that there is life beyond pressing buttons . Just code and deploy .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[octopress is easy piece]]></title>
+    <link href="http://igauravsehrawat.github.io/blog/2014/02/26/octopress-is-easy-piece.markdown/"/>
+    <updated>2014-02-26T09:32:13+05:30</updated>
+    <id>http://igauravsehrawat.github.io/blog/2014/02/26/octopress-is-easy-piece.markdown</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>

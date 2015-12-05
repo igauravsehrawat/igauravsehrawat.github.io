@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: communication,interaction | !Gaurav ]]></title>
+  <link href="http://igauravsehrawat.github.io/blog/categories/communication-interaction/atom.xml" rel="self"/>
+  <link href="http://igauravsehrawat.github.io/"/>
+  <updated>2015-08-30T17:31:40+05:30</updated>
+  <id>http://igauravsehrawat.github.io/</id>
+  <author>
+    <name><![CDATA[Gaurav Sehrawat]]></name>
+    <email><![CDATA[igauravsehrawat@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Communication Is Important]]></title>
+    <link href="http://igauravsehrawat.github.io/blog/2014/02/27/communication-is-important/"/>
+    <updated>2014-02-27T18:32:13+05:30</updated>
+    <id>http://igauravsehrawat.github.io/blog/2014/02/27/communication-is-important</id>
+    <content type="html"><![CDATA[<h2>Communication Is Important</h2>
+
+<p>Communication is very important . This is productivity part for any job. This shows</p>
+
+<ul>
+<li>commitment</li>
+<li>your understanding ,</li>
+<li>progress towards goals,</li>
+<li>problems in goals</li>
+</ul>
+
+
+<p>It is acutally not the pair programming instead it&rsquo;s actually the communication which is best practice in developing and writing codes. If one is thinking that he/she will surprise the world just like that in a go.</p>
+
+<blockquote><pre><code>   You are at the wrong side .
+</code></pre></blockquote>
+
+<p>Productivity comes when you don&rsquo;t even think about it .</p>
+]]></content>
+  </entry>
+  
+</feed>

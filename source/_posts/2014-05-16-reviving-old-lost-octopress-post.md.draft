@@ -1,0 +1,19 @@
+---
+layout: post
+permalink: /reviving-old-lost-octopress-blog/
+title: How to revive old lost octopress blog
+description: "Which parse scripts to use to parse atom.xml"
+tags: [octopress ,ruby,parsing]
+comments: true
+share: true
+---
+
+Have you ever lost some blog without source ?
+
+If yes the below script will be helpful for you to convert your atom.xml [rss feed] into markdown files .
+
+Script is parser which first parse the filename and then its content using nokogiri. There are scripts already available for same if blog is on wordpress .
+
+
+
+

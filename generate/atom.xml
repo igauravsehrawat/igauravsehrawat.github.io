@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[!Gaurav ]]></title>
+  <link href="http://igauravsehrawat.github.io/atom.xml" rel="self"/>
+  <link href="http://igauravsehrawat.github.io/"/>
+  <updated>2015-05-22T15:17:33+05:30</updated>
+  <id>http://igauravsehrawat.github.io/</id>
+  <author>
+    <name><![CDATA[Gaurav Sehrawat]]></name>
+    <email><![CDATA[root@igauravsehrawat.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[first_post]]></title>
+    <link href="http://igauravsehrawat.github.io/blog/2014/06/02/first-post/"/>
+    <updated>2014-06-02T00:37:01+05:30</updated>
+    <id>http://igauravsehrawat.github.io/blog/2014/06/02/first-post</id>
+    <content type="html"><![CDATA[<h1>Purpose of blogging</h1>
+
+<p>This blogging page will mainly deal with the meta information on information technology and its domain . This will completely deal with non-technical aspect &amp; thoughts .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to revive old lost octopress blog]]></title>
+    <link href="http://igauravsehrawat.github.io/reviving-old-lost-octopress-blog/"/>
+    <updated>2014-05-16T00:00:00+05:30</updated>
+    <id>http://igauravsehrawat.github.io/reviving-old-lost-octopress-post.md</id>
+    <content type="html"><![CDATA[Have you ever lost some blog without source ? 
+
+If yes the below script will be helpful for you to convert your atom.xml [rss feed] into markdown files . 
+
+Script is parser which first parse the filename and then its content using nokogiri. There are scripts already available for same if blog is on wordpress .
+
+
+
+
+]]></content>
+  </entry>
+  
+</feed>

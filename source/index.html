@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="blog-index">
+  {% assign index = true %}
+  {% for post in paginator.posts %}
+    {% if site.posts_per_row %}
+      {% assign posts_per_row = site.posts_per_row %}
+    {% else %}
+      {% assign posts_per_row = 4 %}
+    {% endif %}
+  {% assign ind = forloop.index0 | modulo: posts_per_row %}
+  {% if ind == 0 %}
+  {% unless forloop.first %}
+  </div>
+  {% endunless %}
+  <div class="row-fluid">
+  {% endif %}
+  {% assign content = post.content %}
+    <article class="span3">
+    <div class="post-box" data-href="{{ root_url }}{{ post.url }}">
+      {% include article.html %}
+    </div>
+    </article>
+  {% endfor %}
+  </div>
+  <div class="pagination">
+    {% if site.pagination_older_right %}
+      {% if paginator.previous_page %}
+      <a class="next" href="{{paginator.previous_page}}">&larr; Newer</a>
+      {% endif %}
+      <a href="/blog/archives" class="hide-mobile">Blog Archives</a>
+      {% if paginator.next_page %}
+      <a class="prev" href="{{paginator.next_page}}">Older &rarr;</a>
+      {% endif %}
+    {% else %}
+      {% if paginator.next_page %}
+      <a class="next" href="{{paginator.next_page}}">&larr; Older</a>
+      {% endif %}
+      <a href="/blog/archives" class="hide-mobile">Blog Archives</a>
+      {% if paginator.previous_page %}
+      <a class="prev" href="{{paginator.previous_page}}">Newer &rarr;</a>
+      {% endif %}
+    {% endif %}
+  </div>
+</div>

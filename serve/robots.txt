@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://igauravsehrawat.github.io/sitemap.xml 

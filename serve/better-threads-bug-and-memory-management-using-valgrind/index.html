@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>better threads bug and memory management using valgrind — !Gaurav </title>
+  <meta name="author" content="Gaurav Sehrawat"/>
+
+  
+  <meta name="description" content="how to efficiently handle c and c++ memory management,thread bugs & profiling programs in detail"/>
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  
+  <link rel="canonical" href="http://igauravsehrawat.github.iobetter-threads-bug-and-memory-management-using-valgrind"/>
+  <link href="/favicon.png" rel="icon"/>
+  <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+  <link href="/atom.xml" rel="alternate" title="!Gaurav " type="application/atom+xml"/>
+  <script src="//cdn.jsdelivr.net/jquery/1.11/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.min.js"><\/script>')</script>
+  
+  
+  
+
+  
+
+  
+
+</head>
+
+<body >
+  
+  <header role="banner" class="hidden">
+  <h1><a href="/">!Gaurav </a></h1>
+
+
+  <h2>Manifestations preserved as thoughts on blog</h2>
+
+
+</header>
+  
+  <nav class="navbar navbar-static-top" role="navigation"><div class="nav-collapse collapse">
+<ul class="nav subscription pull-right" data-subscription="rss">
+  <li><a href="/atom.xml" rel="alternate" data-type="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form class="navbar-search pull-right" action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sites" value="igauravsehrawat.github.io" />
+    <input type="hidden" name="q" value="site:igauravsehrawat.github.io" />
+    <input class="search search-query" type="text" id="q" name="q"
+      placeholder="Search"
+       />
+  </fieldset>
+  
+</form>
+  
+</div>
+<ul class="nav main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="content" class="container">
+    <article class="hentry span10 offset1" role="article">
+  
+  <header>
+    
+      
+        
+          
+        
+      
+      
+      <h1 class="entry-title">Better Threads Bug and Memory Management Using Valgrind</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-08-05T00:00:00+05:30" data-updated="true"></time>
+      </p>
+    
+  </header>
+
+
+<div class="entry-content lettrine"><h3>Problem ?</h3>
+
+<p>Problem arises when you don&rsquo;t get to know why my program dysfunctional , inspite of correct logic . The problem may be with memory handling or in the thread handling . Learning syntax is half part , gaining proficiency is another part .</p>
+
+<h3>what exactly is memory management ?</h3>
+
+<p>In C/C++ assigning memory &amp; handling threads can PITA until one reach a level of experience .
+Let&rsquo;s go by an example:</p>
+
+<div>
+  <pre><code class='c'>#include &lt;stdlib.h&gt;
+
+void bad_memory(void){
+    
+    int* array_alloc = malloc(20 * sizeof(int));
+    array_alloc[20] = 10 ;
+}
+
+int main(void){
+    
+    bad_memory();
+    return 0 ; 
+}</code></pre>
+</div>
+
+
+<p>The above code has two errors . It doesn&rsquo;t pops up during compilation and during execution .
+First one : assigning out of bound index of array_alloc a value i.e array_alloc[20]
+Second one : not freeing the allocated memory resulting in memory leak .</p>
+
+<h3>Valgrind to rescue !</h3>
+
+<p>By definition : The <a href="valgrind.org">Valgrind</a> tool suite provides a number of debugging and profiling tools that help you make your programs faster and more correct. The most popular of these tools is called Memcheck. It can detect many memory-related errors that are common in C and C++ programs and that can lead to crashes and unpredictable behaviour.</p>
+
+<p>To rescue onself run the executable using valgrind command</p>
+
+<div>
+  <pre><code class='c'>valgrind --leak-check=full ./a.out</code></pre>
+</div>
+
+
+<p>The result is as following</p>
+
+<div>
+  <pre><code class='bash'>valgrind --leak-check=full ./a.out 
+==25516== Memcheck, a memory error detector
+==25516== Copyright (C) 2002-2011, and GNU GPL&#39;d, by Julian Seward et al.
+==25516== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==25516== Command: ./a.out
+==25516== 
+==25516== Invalid write of size 4
+==25516==    at 0x400512: bad_memory (in /home/rooted/Documents/git-repos/workshop/code/a.out)
+==25516==    by 0x400522: main (in /home/rooted/Documents/git-repos/workshop/code/a.out)
+==25516==  Address 0x51f2068 is 0 bytes after a block of size 40 alloc&#39;d
+==25516==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25516==    by 0x400505: bad_memory (in /home/rooted/Documents/git-repos/workshop/code/a.out)
+==25516==    by 0x400522: main (in /home/rooted/Documents/git-repos/workshop/code/a.out)
+==25516== 
+==25516== 
+==25516== HEAP SUMMARY:
+==25516==     in use at exit: 40 bytes in 1 blocks
+==25516==   total heap usage: 1 allocs, 0 frees, 40 bytes allocated
+==25516== 
+==25516== 40 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==25516==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25516==    by 0x400505: bad_memory (in /home/rooted/Documents/git-repos/workshop/code/a.out)
+==25516==    by 0x400522: main (in /home/rooted/Documents/git-repos/workshop/code/a.out)
+==25516== 
+==25516== LEAK SUMMARY:
+==25516==    definitely lost: 40 bytes in 1 blocks
+==25516==    indirectly lost: 0 bytes in 0 blocks
+==25516==      possibly lost: 0 bytes in 0 blocks
+==25516==    still reachable: 0 bytes in 0 blocks
+==25516==         suppressed: 0 bytes in 0 blocks
+==25516== 
+==25516== For counts of detected and suppressed errors, rerun with: -v
+==25516== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 2 from 2)</code></pre>
+</div>
+
+
+<p>There are two errors : Heap error for invalid assign &amp; Leaks relating lost memory .</p>
+
+<p>Valgrind can also be misused to profile your code (pun intended )
+Further Valgrind can also be used for Bounty programs (like google chrome).</p>
+
+<h3>Conclusion !</h3>
+
+<p>There are other tools for debugging like <a href="http://www.gnu.org/software/gdb/">GDB</a> which is very elaborate &amp; pro-like . Apart from that Valgrind is there .
+As pointed out what&rsquo;s better than finding out bugs as quickly without any pain .</p>
+
+<p>Comments welcomed . Pros &amp; cons ?</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Gaurav Sehrawat</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-08-05T00:00:00+05:30" data-updated="true"></time>
+      
+
+
+    </p>
+    <p class="meta">
+      
+        
+          <a class="basic-alignment left" href="/brilliant-jerks/" title="Previous Post: avoid brilliant jerks">&larr;<span class="hide-mobile">&nbsp;avoid brilliant jerks</span></a>
+        
+        
+          <a class="basic-alignment right" href="/productive-tips-for-command-interface/" title="Next Post: productive tips for command interface particularly shell"><span class="hide-mobile">productive tips for command interface particularly shell&nbsp;</span>&rarr;</a>
+        
+      
+    </p>
+  </footer>
+	
+	<section id="comments">
+		<h1>Comments</h1>
+		
+		
+		<div id="disqus_thread" aria-live="polite">
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+		</div>
+		
+	</section>
+	
+</article>
+
+  </div>
+  <footer role="contentinfo"><a rel="license" href="/license" class="CC">
+  <img alt="Creative Commons License" src="/img/cc-by-nc-small.png">
+</a>
+
+<script src="/js/typo.js"></script>
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'igauravsehrawat';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://igauravsehrawat.github.iobetter-threads-bug-and-memory-management-using-valgrind';
+        var disqus_url = 'http://igauravsehrawat.github.iobetter-threads-bug-and-memory-management-using-valgrind';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

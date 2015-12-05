@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: computation,thinking | !Gaurav ]]></title>
+  <link href="http://igauravsehrawat.github.io/blog/categories/computation-thinking/atom.xml" rel="self"/>
+  <link href="http://igauravsehrawat.github.io/"/>
+  <updated>2015-12-03T22:05:47+05:30</updated>
+  <id>http://igauravsehrawat.github.io/</id>
+  <author>
+    <name><![CDATA[Gaurav Sehrawat]]></name>
+    <email><![CDATA[igauravsehrawat@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Planning doesn't work while judging does.]]></title>
+    <link href="http://igauravsehrawat.github.io/blog/2014/03/09/planning-does-not-work-while-judging-does/"/>
+    <updated>2014-03-09T18:32:13+05:30</updated>
+    <id>http://igauravsehrawat.github.io/blog/2014/03/09/planning-does-not-work-while-judging-does</id>
+    <content type="html"><![CDATA[<h2>Planning Does Not Work While Judging Does</h2>
+
+<pre><code>Yes.  
+</code></pre>
+
+<p>Planning includes others people actions, well that can change instantaneously . So the plan gets nowhere. Is that what you want ? NO.</p>
+
+<p>Judging part includes you as an integral part. Well you can trust yourself more than anybody else yourself.</p>
+
+<p>Planning also sounds more like a evil intention. Judging either goes right or wrong . That&rsquo;s all.</p>
+
+<blockquote><pre><code>Goal is same but paths are different . Choose the right one.
+</code></pre></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Computional thinking]]></title>
+    <link href="http://igauravsehrawat.github.io/blog/2014/03/06/computational-thinking-way-to-problem-solving/"/>
+    <updated>2014-03-06T18:32:13+05:30</updated>
+    <id>http://igauravsehrawat.github.io/blog/2014/03/06/computational-thinking-way-to-problem-solving</id>
+    <content type="html"><![CDATA[<h2>Computational Thinking: Way to Problem Solving</h2>
+
+<blockquote><pre><code>   What is compuational Thinking ?
+</code></pre></blockquote>
+
+<p>It is an approach to problem solving,system designing and also understanding human behaviour by drawing on the concepts fundamental to computer science . Pretty Gross ?</p>
+
+<p>Simplification: Act of thinking with principles borrowed from computer.</p>
+
+<p>Any problem can be solved if it is thinked in terms of :</p>
+
+<blockquote><pre><code> 1. Constraints   
+ 2. Abstraction  
+ 3. Decomposition  
+ 4. Heuristics  
+ 5. Algorithms  
+ 6. Recursion  
+ 7. Concurrency  
+ 8. Synchronization  
+ 9. Efficiency  
+ 10. Elegance  
+ 11. Tradeoffs between processing and storage  
+ 12. Caching  
+ 13. Interpreting code as data and data as code [ imp]  
+ 14. Prevention,detection and recovery from worst-case scenarios.  
+</code></pre></blockquote>
+
+<p>That&rsquo;s all the cases researcher{J.M. Wing} could have thought of till now. So just fit your problem in terms of above parameters and one is good to go.</p>
+]]></content>
+  </entry>
+  
+</feed>
