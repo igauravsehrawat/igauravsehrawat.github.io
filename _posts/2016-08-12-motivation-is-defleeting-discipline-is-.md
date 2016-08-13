@@ -1,7 +1,7 @@
 ---
 layout: post
-permalink: /motivation-is-defleeting-but-discipline-is-not/
-title: "Motivation is defleeting while discipline is not"
+permalink: /motivation-is-fleeting-but-discipline-is-not/
+title: "Motivation is fleeting while discipline is not"
 description: "Don't bank on motivation. It's an inherently a bad idea."
 tags: [Motivation, Discipline, Idea, Monday]
 comments: true
