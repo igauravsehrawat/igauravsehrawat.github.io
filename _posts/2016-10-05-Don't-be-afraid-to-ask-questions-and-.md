@@ -10,7 +10,7 @@ share: true
 
 > If you don't step forward you will always be at same place.
 
-Everyone got questions, doubts. It's important to feed them. Sometimes internet isn't enough, sometimes you need to discuss the approach. One common way is to ask personally for help or guidance. But sometimes it's shyness, sometimes it's ego, sometimes it's the feeling of asking for a favor. It's important not to spoon-feed yourself at the same time.
+Everyone got questions, doubts. It's important to feed them. Sometimes internet isn't enough, sometimes you need to discuss the approach, show how you did it or internet is just broken. One common way is to ask personally for help or guidance. But sometimes it's shyness, sometimes it's ego, sometimes it's the feeling of asking for a favor. It's important not to spoon-feed yourself at the same time.
 
 > Also don't be afraid to be wrong, do correct yourself.
 
