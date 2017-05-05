@@ -15,7 +15,8 @@ Let's face it, it's cumbersome to ssh into raspberry pi and write code there.
 
 2. Use Rsync to sync folder from working location to remote location.
 For example:
-``` rsync manual-interface/ -azP pi@192.168.43.34:/home/pi/Projects/manual-interface/ ```
+{% highlight bash%} rsync manual-interface/ -azP pi@192.168.43.34:/home/pi/Projects/manual-interface/ 
+{% endhighlight %}
 This command will sync the content of `manual-interface` on host computer to remote location which is at raspberry pi. If ssh keys are configured, one won't need to enter password for raspberry pi.
 
 
@@ -23,13 +24,13 @@ This command will sync the content of `manual-interface` on host computer to rem
 `watchdog` is wonderful python package for monitoring events on file system.
 One can write a python script using watchdog package or simply use `watchmedo` shell command.
 For example:
-```
+{% highlight bash%}
 watchmedo shell-command \
     --patterns="*.py;*.txt;*.js;*.css;*.html" \
     --recursive \
     --command='rsync . -azP pi@192.168.43.34:/home/pi/Projects' \
     . \
-```
+{% endhighlight %}
 Here I am looking for pattern recursive inside the current location, on detection of changes on file system, `rsync` comes to rescue for syncing.
 
 
