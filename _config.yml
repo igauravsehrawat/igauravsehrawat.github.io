@@ -2,7 +2,7 @@ title:            Gaurav Sehrawat
 description:      Rooted thoughts and ideas
 disqus_shortname: "igauravsehrawat"
 reading_time:     true
-words_per_minute: 200
+words_per_minute: 100
 # Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
 # When testing locally leave blank or use http://localhost:4000
 url: https://igauravsehrawat.github.io
@@ -18,7 +18,7 @@ owner:
   twitter: "root3d"
   facebook:
   github: "igauravsehrawat"
-  stackexchange: "2174742"
+  stackexchange: "https://stackexchange.com/users/2489196/igaurav"
   linkedin: "igauravsehrawat"
   instagram:
   flickr:
