@@ -34,6 +34,7 @@ That's it, all we need is pseudo elements(as the heading states) to make the bra
 
 We will make this tree in parts, right part has root included itself. First lets draw the tree in crude way.
 
+### Tree skeleton 
 The tree skeleton is like something below:
 
 {% highlight html linenos %}
@@ -144,6 +145,7 @@ Notice how positioning is done using `top` and `left`.
 
 Tree skeleton <a href="https://codepen.io/igaurav/pen/WEEmpL" target="_blank" rel="noopener noreferrer">demo is here.</a>.
 
+### Nodes on the tree
 Now we can add `label` on the right and tree will look <a href="https://codepen.io/igaurav/pen/gxGVdJ" target="_blank" rel="noopener noreferrer">Neat like this.</a>
 
 Label will be like this:
@@ -169,8 +171,9 @@ Notice the `top` and `margin-top` to make this label centered in the div using `
 
 Whew, that's all.
 
-*The left tree is easy and left as an exercise to the reader.(Just kidding.)*
+*The left sub tree is easy and left as an exercise to the reader.(Just kidding.)*
 
+### Left sub tree
 For the left part construct the tree same as right tree but some CSS needs to be reversed. The quickest way to understand this is see the diff of two tree's CSS 
 {% highlight diff linenos%}
     -.branch {
@@ -234,6 +237,7 @@ For the left part construct the tree same as right tree but some CSS needs to be
 
 Now if you notice `branch` is place with `margin` of 250 px from right in its position, the `magenta` color connection is placed at 100 px to right from nodes which is opposite of what is on right side tree. `.entry-inverse` is now positioned with respect to right and `.label-inverse` is also position with respect to right.
 
+### CSS polishing 
 Now comes the task of providing finish to the product, we want round curves instead of bland straight lines in the tree. It's important to note on `:first-child` and `:last-child` need to have rounded corners. Like the pic given below.
 
 <figure>
@@ -295,6 +299,8 @@ If now you remove the dashed lines, you will get the straight lines except for t
   display: none;
 }
 {% endhighlight %}
+
+### Right side rounded corners
 
 Similarly the right side tree rounded corners can be handled. See the diff below for instant salvation.
 
@@ -360,7 +366,11 @@ Similarly the right side tree rounded corners can be handled. See the diff below
 
 As you can see only border radius has been changed.
 
+### Conclusion
+
 That's concludes our tree and sweet CSS lesson. <a href="https://codepen.io/igaurav/pen/mMqyoY" target="_blank" rel="noopener noreferrer">Neat polished demo is here.</a>
+
+> Remember you need patience with CSS else just go for SCSS/Sass. :)
 
 And Of course it was there on the web but <a href="https://codepen.io/P233/pen/Kzbsi" target="_blank" rel="noopener noreferrer">the half part.</a>
 Till next time.
