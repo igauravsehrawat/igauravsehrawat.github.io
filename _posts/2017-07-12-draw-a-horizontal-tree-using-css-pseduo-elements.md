@@ -3,7 +3,7 @@ layout: post
 title: "Draw a horizontal tree using CSS pseudo elements"
 description: "Making connections between two nodes using CSS pseudo elements for a tree placed horizontally."
 permalink: "draw-a-horizontal-tree-using-css-pseduo-elements"
-tags: ["CSS", "Pseudo-elements", "Tree", "Nodes"]
+tags: ["CSS", "Pseudo-elements", "Tree", "Nodes", "Edges", "HTML"]
 share: true
 comments: true
 ---
@@ -14,7 +14,12 @@ If it doesn't work, you know that it is confused and won't give an error. This c
 
 Let's come to drawing a horizontal tree with a root in center, because why not.The tree structure should like 
 
-![Centered horizontal tree](/images/centered-horizontal-tree.png)
+<figure>
+    <a href="/images/centered-horizontal-tree.png" class="image-popup">
+        <img src="/images/centered-horizontal-tree.png">
+    </a>
+    <figcaption>Centered horizontal tree</figcaption>
+</figure>
 
 A node can have multiple children, in simple terms and each tree will be centered around root. Don't bother about responsive-ness for now, it will require some javascript and SVG which we aren't going to do for now.
 
@@ -23,7 +28,7 @@ A node can have multiple children, in simple terms and each tree will be centere
 
 ### What is a pseudo element?
 
-You might have used pseudo classes abundantly, pseudo elements are similar to pseudo classes but they are used to style specific part of the selected item. For eg. :before/::before, :after/::after, :placeholder, :grammar-error etc.
+You might have used pseudo classes abundantly, pseudo elements are similar to pseudo classes but they are used to style specific part of the selected item. For eg. `:before/::before`, `:after/::after`, `:placeholder`, `:grammar-error` etc.
 
 That's it, all we need is pseudo elements(as the heading states) to make the branches out of the nodes, either horizontal or vertical. Also knowledge of relative positioning and absolute positioning will come handy.
 
@@ -81,13 +86,19 @@ The tree skeleton is like something below:
 
 which will look like 
 
-![tree-skeleton](/images/tree-skeleton.png)
+<figure>
+    <a href="/images/tree-skeleton.png" class="image-popup">
+        <img src="/images/tree-skeleton.png">
+    </a>
+    <figcaption>Tree skeleton</figcaption>
+</figure>
 
 So we have branches, which have entry and entry can other branches and entries as its child(ren). Let's first understand how CSS will be applied, CSS will be applied from inner most tag to other most tag, so the height of branches will add up and each branch's height will be cumulative from previous height.
 
 We have fixed the node's width to 150 px here also incoming connection and outgoing connection are 50 px each, therefore a branch will be 250 px wide.
 
 Let's come to drawing connections, we have `entry` as node which is our reference for connections, we will create incoming connection on the right tree using `:after` pseudo element. For branch's height we will use `:before` pseudo element on `entry` element. It's possible to swap `:before` and `:after` but need to some alignment.
+Branch has the outgoing connection.
 
 {% highlight css linenos %}
     .entry:before {
@@ -108,17 +119,32 @@ Let's come to drawing connections, we have `entry` as node which is our referenc
       top: 50%;
       margin-top: 1px;
     }
+
+    .branch:before {
+  content: "";
+  width: 50px;
+  border-top: 2px solid magenta;
+  position: absolute;
+  left: -100px;
+  top: 50%;
+  margin-top: 1px;
+}
 {% endhighlight %}
 
 Think pseudo elements as box and then choose their side, that's what we have done, for incoming connection we chose `border-top`, for branch height we chose `border-left`. See the image how boxes looks like.
 
-![box-border](/images/box-border.png)
+<figure>
+    <a href="/images/box-border.png" class="image-popup">
+        <img src="/images/box-border.png">
+    </a>
+    <figcaption>Box border</figcaption>
+</figure>
 
 Notice how positioning is done using `top` and `left`.
 
-Tree skeleton [demo is here](https://codepen.io/igaurav/pen/WEEmpL).
+Tree skeleton <a href="https://codepen.io/igaurav/pen/WEEmpL" target="_blank" rel="noopener noreferrer">demo is here.</a>.
 
-Now we can add `label` on the right and tree will look [like this](https://codepen.io/igaurav/pen/gxGVdJ).
+Now we can add `label` on the right and tree will look <a href="https://codepen.io/igaurav/pen/gxGVdJ" target="_blank" rel="noopener noreferrer">Neat like this.</a>
 
 Label will be like this:
 {% highlight css linenos %}
@@ -210,9 +236,14 @@ Now if you notice `branch` is place with `margin` of 250 px from right in its po
 
 Now comes the task of providing finish to the product, we want round curves instead of bland straight lines in the tree. It's important to note on `:first-child` and `:last-child` need to have rounded corners. Like the pic given below.
 
-![round-border](/images/round-border.png)
+<figure>
+    <a href="/images/round-border.png" class="image-popup">
+        <img src="/images/round-border.png">
+    </a>
+    <figcaption>Round border</figcaption>
+</figure>
 
-Demo code is [present here](https://codepen.io/igaurav/pen/vJWEez)
+Demo code is <a href="https://codepen.io/igaurav/pen/vJWEez" target="_blank" rel="noopener noreferrer">present here.</a>.
 
 For this we have provided round border to straight line and incoming connection to the node for their `:first-child` and `:last-child` with `:before` and `:after` property individually. Also we will truncate the `height` to 50% and `position` it 50% from top.
 
@@ -329,6 +360,7 @@ Similarly the right side tree rounded corners can be handled. See the diff below
 
 As you can see only border radius has been changed.
 
-That's concludes our tree and sweet CSS lesson. [Neat polished demo is here](https://codepen.io/igaurav/pen/mMqyoY).
+That's concludes our tree and sweet CSS lesson. <a href="https://codepen.io/igaurav/pen/mMqyoY" target="_blank" rel="noopener noreferrer">Neat polished demo is here.</a>
 
+And Of course it was there on the web but <a href="https://codepen.io/P233/pen/Kzbsi" target="_blank" rel="noopener noreferrer">the half part.</a>
 Till next time.
