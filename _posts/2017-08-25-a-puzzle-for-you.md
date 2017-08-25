@@ -39,6 +39,14 @@ The obvious possibility of surviving is 50% without doubt, how??. Well a group o
 
 > You can save significantly high number of people.
 
+<hr>
+Try to solve the puzzle yourself first.
+<hr>
+
+<hr>
+Ok fine, see the solution now.
+<hr>
+
 Rang a bell??
 
 Let's draw the scenario 
