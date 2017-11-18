@@ -12,7 +12,7 @@ CSS is amazing(Human err).
 
 If it doesn't work, you know that it is confused and won't give an error. This confusion could have been solved by giving error/warning but CSS choose not too. That's why all this hate for CSS on internet.
 
-Let's come to drawing a horizontal tree with a root in center, because why not.The tree structure should like 
+Let's come to drawing a horizontal tree with a root in center, because WHY not. The tree structure should be like 
 
 <figure>
     <a href="/images/centered-horizontal-tree.png" class="image-popup">
@@ -23,7 +23,7 @@ Let's come to drawing a horizontal tree with a root in center, because why not.T
 
 A node can have multiple children, in simple terms and each tree will be centered around root. Don't bother about responsive-ness for now, it will require some javascript and SVG which we aren't going to do for now.
 
-### Concepts needed
+### Concept(s) needed
 > CSS pseudo elements
 
 ### What is a pseudo element?
@@ -372,5 +372,5 @@ That's concludes our tree and sweet CSS lesson. <a href="https://codepen.io/igau
 
 > Remember you need patience with CSS else just go for SCSS/Sass. :)
 
-And Of course it was there on the web but <a href="https://codepen.io/P233/pen/Kzbsi" target="_blank" rel="noopener noreferrer">the half part.</a>
+And Of course it was there on the web but <a href="https://codepen.io/P233/pen/Kzbsi" target="_blank" rel="noopener noreferrer">only the half part.</a>
 Till next time.
