@@ -132,7 +132,8 @@ First localhost is of the server and second is of local machine, then the addres
 That's it.
 
 Happy Dance as promised.
-![happy-dance](https://media1.tenor.com/images/88848d2067d622de8e4f314e28dc431a/tenor.gif)
+
+![happy-dance](https://media.giphy.com/media/10UtqJNULHPfxe/giphy.gif)
 
 > Wait, wait, we haven't tested yet.
 
@@ -143,8 +144,8 @@ And then run the magic SSH command
 `ssh -N -R localhost:4242:localhost:3000 root@42.igauravsehrawat.com`
 
 See it in action
-![localhost-on-internet](https://preview.ibb.co/mhaAKT/localhost_on_internet.gif)
+![localhost-on-internet](https://i.imgur.com/tMX81nZ.gif)
 
 ## Conclusion
 
-With power of Digital Ocean, it is not that hard to have your own setup. You just have your own customized, SSL enable sub domain with no restrictions.
+With power of just one server, it is not that hard to have your own setup. You just have your own customized, SSL enable sub domain with no restrictions.
