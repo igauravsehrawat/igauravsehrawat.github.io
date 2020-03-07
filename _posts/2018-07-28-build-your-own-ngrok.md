@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Localhost on the internet"
-permalink: /localhost-on-the-internet/
+title: "Build your own ngrok in 4 easy steps"
+permalink: /build-your-own-ngrok-4-easy-steps/
 description: "Show your localhost to the internet, the easy way."
 tags: ["localhost", "internet", "ngrok", "localtunnel", "pagekite"]
 share: true
 comments: true
 ---
 
-# Your Localhost On The Internet And That Too SSL enabled With No Restrictions.
+# Your own personal ngrok.
 
 ## Introduction
 There are tons of service which provide you the way to expose your localhost on internet. We need it for testing 3rd party APIs or show casing current development server. For example the most popular ones are:
@@ -101,7 +101,7 @@ CNAME is just an alias of our A/AAAA record. All three will appear as shown belo
 So that's all here, you should be able to access your sub-domain over internet, showing you `502 Bad Gateway` page, which is expected since nothing is being forwarded to port `4242`.
 
 
-##. Step 3 - Enabling SSL
+## Step 3 - Enabling SSL
 Enabling SSL is piece of cake, more easy than that.Follow the `certbot` installation sets from [here](https://certbot.eff.org/lets-encrypt/ubuntuxenial-nginx)
 
 Then run the magic command for nginx
