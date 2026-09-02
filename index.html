@@ -1,40 +1,403 @@
----
-layout: post-index
-title: Rooted thoughts and ideas derived from manifestations.
-description: "Keep Calm And Blog On."
-tags: [Jekyll, theme, themes, responsive, blog, modern]
-comments: true
-image:
-  feature: abstract-1.jpg
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaurav Sehrawat — Solutions Architect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #f5f6f2;
+    --grid-line: #e1e4dc;
+    --ink: #14181c;
+    --ink-soft: #4a5058;
+    --card: #ffffff;
+    --card-border: #dfe3db;
+    --accent: #2f5d8a;
+    --accent-soft: #e7edf3;
+    --status: #2f8a5d;
+    --status-soft: #e6f2ec;
+    --amber: #b5791f;
+    --radius: 14px;
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'IBM Plex Sans', sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:
+      linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0/48px 48px,
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0/48px 48px,
+      var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.55;
+    padding: 32px 20px 80px;
+  }
+  .wrap{ max-width: 1080px; margin: 0 auto; }
 
-{% for post in paginator.posts %}
-<article class="hentry">
+  header{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom: 20px; flex-wrap: wrap; gap: 12px;
+  }
+  .brand{ font-family: var(--mono); font-size: 14px; letter-spacing: 0.02em; color: var(--ink-soft); }
+  .brand a{ color: inherit; text-decoration: none; }
+
+  .hire-banner{
+    grid-column: span 6;
+    display:flex; align-items:center; justify-content:space-between;
+    background: var(--status-soft);
+    border: 1px solid #c6e2d3;
+    border-radius: var(--radius);
+    padding: 16px 22px;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .hire-left{ display:flex; align-items:center; gap:10px; }
+  .dot{ width:8px; height:8px; border-radius:50%; background: var(--status); flex-shrink:0; }
+  @media (prefers-reduced-motion: no-preference){ .dot{ animation: pulse 2.2s ease-in-out infinite; } }
+  @keyframes pulse{ 0%,100%{opacity:1} 50%{opacity:.35} }
+  .hire-left span.t{ font-family: var(--mono); font-size: 13px; color: var(--status); font-weight: 500; }
+  .hire-banner .sub{ font-size: 13px; color: var(--ink-soft); margin-left: 4px; }
+  .hire-cta{ display:flex; gap: 8px; flex-wrap: wrap; }
+
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .tile{
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .tile-id{
+    font-family: var(--mono); font-size: 11px; color: var(--ink-soft);
+    text-transform: lowercase; letter-spacing: 0.03em; margin-bottom: 10px;
+    display:block;
+  }
+
+  .hero{ grid-column: span 3; }
+  .hero h1{ font-family: var(--mono); font-size: 26px; font-weight: 600; margin-bottom: 6px; letter-spacing:-0.01em; }
+  .hero p{ color: var(--ink-soft); font-size: 14px; }
+  .hero .role{ font-family: var(--mono); font-size: 12.5px; color: var(--accent); margin-top: 10px; display:block; }
+
+  .links-tile{ grid-column: span 3; }
+  .link-list{ display:flex; flex-direction:column; gap:8px; margin-top: 4px; }
+  .link-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 10px 14px; border-radius: 9px; text-decoration:none;
+    border: 1px solid var(--card-border); transition: border-color .15s ease, background .15s ease;
+  }
+  .link-row:hover{ border-color: var(--accent); background: var(--accent-soft); }
+  .link-row .name{ font-size: 14px; color: var(--ink); font-weight: 500; }
+  .link-row .arrow{ font-family: var(--mono); font-size: 13px; color: var(--accent); }
+
+  .newsletter-card{
+    border: 1px solid var(--card-border); border-radius: 9px;
+    padding: 12px 14px; display:flex; flex-direction:column; gap:10px;
+  }
+  .newsletter-top{ display:flex; justify-content:space-between; align-items:flex-start; }
+  .newsletter-name{ font-size: 14px; font-weight: 500; color: var(--ink); display:block; }
+  .newsletter-desc{ font-family: var(--mono); font-size: 11px; color: var(--ink-soft); display:block; margin-top: 3px; }
+  .li-badge{ font-family: var(--mono); font-size: 11px; font-weight: 600; background: #0A66C2; color: #fff; border-radius: 4px; padding: 2px 6px; flex-shrink:0; }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family: var(--mono); font-size: 12.5px; color: #fff;
+    background: var(--ink); border-radius: 8px; padding: 8px 14px;
+    text-decoration: none; white-space:nowrap;
+    transition: opacity .15s ease;
+  }
+  .btn:hover{ opacity: .85; }
+  .btn.accent{ background: var(--accent); }
+  .btn.linkedin{ background: #0A66C2; }
+  .btn.ghost{ background: #fff; color: var(--ink); border: 1px solid var(--card-border); }
+
+  .talk{ grid-column: span 2; padding: 0; }
+  .talk .frame-wrap{ position: relative; width:100%; padding-top: 56.25%; background:#0d0f10; }
+  .talk iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .talk-meta{ padding: 14px 18px 18px; }
+  .talk-meta h3{ font-size: 14px; font-weight: 500; margin-bottom: 3px; font-family: var(--sans); }
+  .talk-meta span{ font-family: var(--mono); font-size: 11px; color: var(--ink-soft); }
+
+  .slides{ grid-column: span 6; }
+  .slides h2{ font-family: var(--mono); font-size: 16px; font-weight: 600; margin-bottom: 14px; }
+  .slides-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .slide-card{
+    border: 1px solid var(--card-border); border-radius: 10px; padding: 14px;
+    display:flex; flex-direction: column; justify-content: space-between; gap: 10px;
+  }
+  .slide-card h3{ font-size: 13.5px; font-weight: 500; }
+  .slide-card span{ font-family: var(--mono); font-size: 11px; color: var(--ink-soft); }
+
+  .repos{ grid-column: span 3; }
+  .repos h2{ font-family: var(--mono); font-size: 16px; font-weight: 600; margin-bottom: 12px; }
+  .repo{ padding: 10px 0; border-top: 1px solid var(--card-border); }
+  .repo:first-of-type{ border-top: none; }
+  .repo h3{ font-size: 13.5px; font-weight: 500; margin-bottom: 4px; }
+  .repo .links{ display:flex; gap: 12px; }
+  .repo .links a{ font-family: var(--mono); font-size: 11.5px; color: var(--accent); text-decoration:none; }
+  .repo .links a:hover{ text-decoration: underline; }
+
+  .stack{ grid-column: span 6; }
+  .stack h2{ font-family: var(--mono); font-size: 16px; font-weight: 600; margin-bottom: 16px; }
+  .stack-groups{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px 24px; }
+  .stack-group h3{ font-family: var(--mono); font-size: 11.5px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 10px; }
+  .tags{ display:flex; flex-wrap: wrap; gap: 7px; }
+  .tag{ font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); background: var(--accent-soft); border-radius: 6px; padding: 5px 9px; }
+
+  .certs{ grid-column: span 3; }
+  .certs h2{ font-family: var(--mono); font-size: 16px; font-weight: 600; margin-bottom: 12px; }
+  .cert{ padding: 9px 0; border-top: 1px solid var(--card-border); display:flex; justify-content:space-between; gap: 10px; }
+  .cert:first-of-type{ border-top: none; }
+  .cert .name{ font-size: 13.5px; font-weight: 500; }
+  .cert .year{ font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); white-space:nowrap; }
+
+  footer{ text-align:center; margin-top: 40px; font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); }
+
+  @media (max-width: 760px){
+    .grid{ grid-template-columns: repeat(2, 1fr); }
+    .hero, .links-tile, .talk, .repos, .certs{ grid-column: span 2; }
+    .slides, .stack{ grid-column: span 2; }
+    .slides-grid{ grid-template-columns: 1fr; }
+    .stack-groups{ grid-template-columns: 1fr; }
+    .hire-banner{ grid-column: span 2; }
+  }
+
+  a:focus-visible, .btn:focus-visible, .link-row:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
   <header>
-    {% if post.image.feature %}
-      <div class="entry-image-index">
-        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
-      </div><!-- /.entry-image -->
-    {% endif %}
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
-      {% if site.reading_time %}
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        {% include read-time-index.html %}
-      </span><!-- /.entry-reading-time -->
-      {% endif %}
-    </div><!-- /.entry-meta -->
-    {% if post.link %}
-      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
-    {% else %}
-      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
-    {% endif %}
+    <span class="brand"><a href="https://igauravsehrawat.nl">igauravsehrawat.nl</a></span>
+    <span class="brand">Amsterdam, NL</span>
   </header>
-  <div class="entry-content">
-    {{ post.content }}
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-{% endfor %}
 
-{% include pagination.html %}
+  <div class="grid">
+
+    <div class="hire-banner">
+      <div class="hire-left">
+        <span class="dot"></span>
+        <span class="t">open to hire</span>
+        <span class="sub">Principal / Staff Engineer / Solutions Architect roles — payments &amp; platform</span>
+      </div>
+      <div class="hire-cta">
+        <a class="btn accent" href="https://calendly.com/igauravsehrawat/30min" target="_blank" rel="noopener">book a call →</a>
+        <a class="btn ghost" href="mailto:igauravsehrawat@gmail.com">email me</a>
+        <a class="btn linkedin" href="https://linkedin.com/in/igauravsehrawat" target="_blank" rel="noopener">linkedin</a>
+      </div>
+    </div>
+
+    <section class="tile hero">
+      <span class="tile-id">// profile</span>
+      <h1>Gaurav Sehrawat</h1>
+      <p>Solutions Architect with 12+ years across engineering and architecture, 4+ years designing and governing end-to-end architecture for a global payments platform. Currently also Acting Engineering Manager at Verifone.</p>
+      <span class="role">principal / staff engineer · solutions architect</span>
+    </section>
+
+    <section class="tile links-tile">
+      <span class="tile-id">// find me</span>
+      <div class="link-list">
+        <a class="link-row" href="https://calendly.com/igauravsehrawat/30min" target="_blank" rel="noopener">
+          <span class="name">Book a call — Calendly</span><span class="arrow">→</span>
+        </a>
+        <a class="link-row" href="https://linkedin.com/in/igauravsehrawat" target="_blank" rel="noopener">
+          <span class="name">LinkedIn</span><span class="arrow">→</span>
+        </a>
+        <a class="link-row" href="https://github.com/igauravsehrawat" target="_blank" rel="noopener">
+          <span class="name">GitHub</span><span class="arrow">→</span>
+        </a>
+        <div class="newsletter-card">
+          <div class="newsletter-top">
+            <div>
+              <span class="newsletter-name">Actionable Loops</span>
+              <span class="newsletter-desc">architecture · payments · weekly</span>
+            </div>
+            <span class="li-badge">in</span>
+          </div>
+          <a class="btn accent" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7352003401083146241" target="_blank" rel="noopener">subscribe →</a>
+        </div>
+        <a class="link-row" href="https://open.spotify.com/episode/5uB4WZZi6ky3SLhTPiVQYr" target="_blank" rel="noopener">
+          <span class="name">Podcast — Spotify</span><span class="arrow">→</span>
+        </a>
+        <a class="link-row" href="mailto:igauravsehrawat@gmail.com">
+          <span class="name">Email</span><span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="tile talk">
+      <div class="frame-wrap">
+        <iframe src="https://www.youtube.com/embed/skY7neldOuI" title="Podcast appearance" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="talk-meta">
+        <h3>Podcast appearance</h3>
+        <span>youtube</span>
+      </div>
+    </section>
+
+    <section class="tile talk">
+      <div class="frame-wrap">
+        <iframe style="border-radius:0" src="https://open.spotify.com/embed/episode/5uB4WZZi6ky3SLhTPiVQYr/video?utm_source=generator" title="Podcast episode — Spotify" frameborder="0" allowfullscreen loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      </div>
+      <div class="talk-meta">
+        <h3>Podcast episode</h3>
+        <span>spotify</span>
+      </div>
+    </section>
+
+    <section class="tile slides">
+      <span class="tile-id">// talks &amp; slides</span>
+      <h2>Conference talks</h2>
+      <div class="slides-grid">
+        <div class="slide-card">
+          <div>
+            <h3>TypeScript Magic</h3>
+            <span>react amsterdam</span>
+          </div>
+          <a class="btn ghost" href="https://www.slideshare.net/slideshow/typescript-magic/250392082" target="_blank" rel="noopener">view slides →</a>
+        </div>
+        <div class="slide-card">
+          <div>
+            <h3>Resource-Oriented Client Architecture</h3>
+            <span>sogeti frontend</span>
+          </div>
+          <a class="btn ghost" href="https://igauravsehrawat.nl/MyTalks/Front-End/ROCA.slides.html" target="_blank" rel="noopener">view slides →</a>
+        </div>
+        <div class="slide-card">
+          <div>
+            <h3>Introduction to GraphQL</h3>
+            <span>it development cafe amsterdam</span>
+          </div>
+          <a class="btn ghost" href="https://igauravsehrawat.nl/MyTalks/IT-Development-Cafe-Amsterdam/GraphQL-103.slides.html" target="_blank" rel="noopener">view slides →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tile stack">
+      <span class="tile-id">// stack &amp; competencies</span>
+      <h2>Skills</h2>
+      <div class="stack-groups">
+        <div class="stack-group">
+          <h3>Architecture &amp; governance</h3>
+          <div class="tags">
+            <span class="tag">End-to-end solution architecture</span>
+            <span class="tag">Architecture roadmapping</span>
+            <span class="tag">Architectural runway</span>
+            <span class="tag">Tech lifecycle mgmt</span>
+            <span class="tag">Stakeholder management</span>
+            <span class="tag">PCI DSS</span>
+            <span class="tag">Risk assessment</span>
+            <span class="tag">PlantUML modelling</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>Cloud &amp; DevOps</h3>
+          <div class="tags">
+            <span class="tag">AWS (SAA)</span>
+            <span class="tag">Docker / Compose</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Jenkins</span>
+            <span class="tag">Kibana</span>
+            <span class="tag">Grafana</span>
+            <span class="tag">Graylog</span>
+            <span class="tag">AppDynamics</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>Languages &amp; frameworks</h3>
+          <div class="tags">
+            <span class="tag">TypeScript / JS</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Python</span>
+            <span class="tag">Java / C++</span>
+            <span class="tag">GraphQL (Apollo)</span>
+            <span class="tag">React / Next.js / Angular</span>
+            <span class="tag">Express / Hapi / Nest.js</span>
+            <span class="tag">Flask / Django</span>
+            <span class="tag">Spring Boot</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>Data</h3>
+          <div class="tags">
+            <span class="tag">MongoDB</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Snowflake</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>Leadership &amp; ways of working</h3>
+          <div class="tags">
+            <span class="tag">Team leadership</span>
+            <span class="tag">1:1 coaching</span>
+            <span class="tag">Stakeholder comms</span>
+            <span class="tag">Observability systems</span>
+            <span class="tag">Agile delivery</span>
+            <span class="tag">Certified Scrum Master</span>
+            <span class="tag">Hiring &amp; mentoring</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tile repos">
+      <span class="tile-id">// selected portfolio</span>
+      <h2>Repositories</h2>
+      <div class="repo">
+        <h3>GraphQL + Next.js e-commerce app</h3>
+        <div class="links">
+          <a href="https://github.com/igauravsehrawat/graphql-react-frontend/" target="_blank" rel="noopener">frontend →</a>
+          <a href="https://github.com/igauravsehrawat/graphql-react-backend/" target="_blank" rel="noopener">backend →</a>
+        </div>
+      </div>
+      <div class="repo">
+        <h3>Payroll app (React / Node.js)</h3>
+        <div class="links">
+          <a href="https://github.com/igauravsehrawat/payroll-frontend-react" target="_blank" rel="noopener">frontend →</a>
+          <a href="https://github.com/igauravsehrawat/payroll-backend-node.js" target="_blank" rel="noopener">backend →</a>
+        </div>
+      </div>
+      <div class="repo">
+        <h3>Meetup video utility (Python)</h3>
+        <div class="links">
+          <a href="https://github.com/igauravsehrawat/meetup-utilities-using-python" target="_blank" rel="noopener">github →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tile certs">
+      <span class="tile-id">// certifications</span>
+      <h2>Certifications</h2>
+      <div class="cert">
+        <span class="name">AWS Certified Solutions Architect — Associate</span>
+        <span class="year">2024</span>
+      </div>
+      <div class="cert">
+        <span class="name">AWS Certified Developer — Associate</span>
+        <span class="year">2020</span>
+      </div>
+      <div class="cert">
+        <span class="name">Certified Scrum Master</span>
+        <span class="year">2019</span>
+      </div>
+      <div class="cert">
+        <span class="name">Dutch — A2, DUO/Inburgeren</span>
+        <span class="year">2024</span>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>igauravsehrawat.nl — built with GitHub Pages</footer>
+</div>
+</body>
+</html>
